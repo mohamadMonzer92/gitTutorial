@@ -51,4 +51,12 @@ var gitTutorialModule{
 	var removeChanges = {
 		$git checkout -- fileName
 	}
+
+	// if we try to commit a file without staging it, we will have an error "Changes not staged for commit"
+	// this is a shortcut to add and commit a file
+	var commitAndAddShortcut = {
+		$git commit -a -m "commit message"	// Add changes from all tracked files
+		// Note that: this command Doesn't add new (untracked) files
+	}
+
 }();
