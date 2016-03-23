@@ -105,4 +105,25 @@ var gitTutorialModule{
 	$git push -u <name> <branch>
 	//		  -- to remember last remote used, so in the next push we don't have to enter the name and the branch
 
+	------------------ level 3 -------------------------
+	To clone a repository
+	// clone will do the following:
+		1. Download the entier repository into a new git-read directory
+		2. create a remote called origin and point it to the clone URL
+			(we can check the list of remotes using:
+				$git remote -v
+			)
+		3. check out initial branch
+	$git clone <address> <optional localFolderName>
+
+
+	Create a branch
+	// when we want to work on a feature that will take some time, it is good to create a branch
+	$git branch branchName		// create a branch, but until now we are on the master branch
+	$git checkout branchName 	// move the the branchName
+		a shortcut to create a branch and to move to it
+		$git checkout -b branchName
+
+	$git branch -d branchName	// Delete branch
+
 }();
