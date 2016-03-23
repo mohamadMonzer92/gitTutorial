@@ -87,12 +87,22 @@ var gitTutorialModule{
 	//					   --------------------------------------------------  repository address
 	//				------ origin is a canonical name for this remote (it can be any other name)
 
-	to push the the repository
+	To push the the repository
 	$git push -u origin master
 	//			 ------ remote repository name
 	//					------ local branch to push
 
-	to pull changes down from the remote
+	To pull changes down from the remote
 	$git pull
+
+	To add new remotes
+	$git remote add <name> <address>
+
+	To remove remotes
+	$git remote rm <name>
+
+	To push to remote
+	$git push -u <name> <branch>
+	//		  -- to remember last remote used, so in the next push we don't have to enter the name and the branch
 
 }();
