@@ -14,9 +14,14 @@ $git init
 
 add file to staging area
 $git add fileName
+To Add all new or modified files to the staging area
+$git add --all
 
-remove file from staging area
+remove file from staging area (unstage)
 $git rm --cached fileName
 
 To Check What's changed since last commit
 $git status
+
+To get GIT TimeLine History (show commits with authors and commits dates)
+$git log
