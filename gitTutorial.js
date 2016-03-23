@@ -1,7 +1,7 @@
 // files status: untracked, staging area, commit, modified
 
 var gitTutorialModule{
-
+	------------------ level 1 -------------------------
 	var gitConfiguration = {
 		$git config --global user.name "Mohamad Monzer"
 		$git config --global user.email mohamad.monzer@outlook.com
@@ -40,6 +40,7 @@ var gitTutorialModule{
 		$git diff --staged 	// get staged differences
 	}
 
+	------------------ level 2 -------------------------
 	// unstage Tip
 	// those commands does not remove modifications!! they just unstage files
 	var removeFileFromStagingArea = {
@@ -58,5 +59,40 @@ var gitTutorialModule{
 		$git commit -a -m "commit message"	// Add changes from all tracked files
 		// Note that: this command Doesn't add new (untracked) files
 	}
+
+	
+
+
+	// ----------- don't do these after you push --------------------------//
+	// whoops, we forgot something on that commit
+	// we want to undo the last commit, put changes into staging
+	var undoCommit{
+		$git reset --soft HEAD^	// Move to commit before "HEAD", put changes into staging
+		$git reset --hard HEAD^ // Move to commit before "HEAD", remove all changes
+	}
+
+	//maybe we forget to add a file, and we want to add it to the last commit
+	var ammendToTheLastCommit = {
+		$git commit --ammend -m "optional commit message to override our previous" 
+	}
+	// ----------- END don't do these after you push --------------------------//
+
+
+
+
+			-------- push to gitHub -----
+	create a gitHub repository
+	$git remote add origin https://github.com/mohamadMonzer92/gitTutorial.git
+	//   ------ New remote
+	//					   --------------------------------------------------  repository address
+	//				------ origin is a canonical name for this remote (it can be any other name)
+
+	to push the the repository
+	$git push -u origin master
+	//			 ------ remote repository name
+	//					------ local branch to push
+
+	to pull changes down from the remote
+	$git pull
 
 }();
