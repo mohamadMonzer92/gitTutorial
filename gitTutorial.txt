@@ -1,0 +1,22 @@
+git tutorial
+-------------
+
+$ git help
+// to get documentation
+
+git configuration
+$git config --global user.name "Mohamad Monzer"
+$git config --global user.email mohamad.monzer@outlook.com
+$git config --global color.ui true
+
+initialize empty git repo
+$git init
+
+add file to staging area
+$git add fileName
+
+remove file from staging area
+$git rm --cached fileName
+
+To Check What's changed since last commit
+$git status
