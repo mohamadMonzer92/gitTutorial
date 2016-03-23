@@ -121,8 +121,11 @@ var gitTutorialModule{
 	// when we want to work on a feature that will take some time, it is good to create a branch
 	$git branch branchName		// create a branch, but until now we are on the master branch
 	$git checkout branchName 	// move the the branchName
-		a shortcut to create a branch and to move to it
-		$git checkout -b branchName
+
+	a shortcut to create a branch and to move to it
+	$git checkout -b branchName
+
+	$git merge branchName		// merge a branch with the master
 
 	$git branch -d branchName	// Delete branch
 
